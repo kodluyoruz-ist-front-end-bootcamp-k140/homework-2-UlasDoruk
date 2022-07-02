@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from "../button"
 import { FormItem } from "../form-item"
+import { Pagination } from "../pagination/pagination";
 
 export class DataGridClsComponent extends React.Component {
 
@@ -28,7 +29,7 @@ export class DataGridClsComponent extends React.Component {
   renderBody = () => {
     return (
       <React.Fragment>
-        {this.state.items.sort((a, b) => b.id - a.id).map((item, i) => {
+        {this.state.items.sort((a, b) => a.id - b.id).map((item, i) => {
           return (
             <tr key={i}>
               <th scope="row" >{item.id}</th>
